@@ -1,5 +1,7 @@
 #![allow(unused, dead_code)]
 
+mod adv;
+
 fn backtrack_1_to_n(i: i32) {
     if i < 1 {return};
     backtrack_1_to_n(i-1);
@@ -39,13 +41,16 @@ fn factorial(n: i32) -> i32 {
     return n * factorial(n-1);
 }
 
+
 fn main() {
     //backtrack_1_to_n(3);
     //backtrack_n_to_1(0, 3);
     sum_1_to_n_param(3, 0);
     let sum = sum_1_to_n_func(3);
     println!("{sum}");
-
+    let mut vec = vec![2, 7, 9, 2];
+    adv::arr::reverse_arr(0, vec.len()-1, &mut vec);
+    println!("{:?}", vec);
     let factorial_ = factorial(5);
     println!("{}", factorial_);
     println!("Hello, world!");
