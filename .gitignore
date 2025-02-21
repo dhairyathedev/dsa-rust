@@ -1,0 +1,39 @@
+# Compiled binaries
+/target/
+**/*.rs.bk
+
+# Rust package manager files
+Cargo.lock
+.cargo/
+
+# Debugging and profiling files
+*.dSYM/
+*.profdata
+*.gcda
+*.gcno
+*.gcov
+
+# IDE and editor specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*.log
+
+# Rust language server
+/rls/
+
+# Clippy and Rustfmt
+cargo-clippy.log
+cargo-fmt.log
+
+# Temporary files
+tmp/
+*.tmp
+*.bak
+
+# Build artifacts and dependencies
+/.rustup/
+.rustc_info.json
+
