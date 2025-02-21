@@ -50,7 +50,8 @@ fn main() {
     let sum = sum_1_to_n_func(3);
     println!("{sum}");
     let mut vec = vec![2, 7, 9, 2];
-    adv::arr::reverse_arr(0, vec.len()-1, &mut vec);
+    // adv::arr::reverse_arr(0, vec.len()-1, &mut vec);
+    adv::arr::reverse_arr_single_ptr(0, vec.len(), &mut vec);
     println!("{:?}", vec);
     let factorial_ = factorial(5);
     println!("{}", factorial_);
