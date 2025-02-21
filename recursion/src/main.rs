@@ -1,6 +1,7 @@
 #![allow(unused, dead_code)]
 
 mod adv;
+use adv::{misc};
 
 fn backtrack_1_to_n(i: i32) {
     if i < 1 {return};
@@ -53,5 +54,8 @@ fn main() {
     println!("{:?}", vec);
     let factorial_ = factorial(5);
     println!("{}", factorial_);
+
+    let string = String::from("google");
+    println!("Palindrome status: {}", misc::check_palindrome(0, string.len()-1, &string));
     println!("Hello, world!");
 }
