@@ -49,7 +49,7 @@ fn main() {
     sum_1_to_n_param(3, 0);
     let sum = sum_1_to_n_func(3);
     println!("{sum}");
-    let mut vec = vec![2, 7, 9, 2];
+    let mut vec = vec![1, 2, 3, 4, 5];
     // adv::arr::reverse_arr(0, vec.len()-1, &mut vec);
     adv::arr::reverse_arr_single_ptr(0, vec.len(), &mut vec);
     println!("{:?}", vec);
@@ -58,5 +58,7 @@ fn main() {
 
     let string = String::from("google");
     println!("Palindrome status: {}", misc::check_palindrome(0, string.len()-1, &string));
+    let n = 6;
+    println!("The sum of fibonacci of {n} numbers is: {}", misc::fibonacci(n));
     println!("Hello, world!");
 }
