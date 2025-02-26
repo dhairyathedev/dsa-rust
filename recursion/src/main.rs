@@ -60,5 +60,11 @@ fn main() {
     println!("Palindrome status: {}", misc::check_palindrome(0, string.len()-1, &string));
     let n = 6;
     println!("The sum of fibonacci of {n} numbers is: {}", misc::fibonacci(n));
+
+
+    let src: Vec<i32> = vec![3,1,2];
+    let n: usize = src.len();
+    misc::subsequence(0, &mut vec![], &src, n);
+
     println!("Hello, world!");
 }
