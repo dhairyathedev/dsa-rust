@@ -1,3 +1,4 @@
+#![allow(unused, dead_code)]
 mod logic;
 use logic::main::{
     basic_hash,

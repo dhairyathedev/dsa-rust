@@ -19,6 +19,9 @@ pub fn basic_hash() {
 }
 
 pub fn char_hashmap() {
-    let ch: u32 = 'a' as u32;
-    println!("{}", ('c' as u32)-ch);
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).unwrap();
+    let str_arr: Vec<char> = input.split("").filter_map(|s| s.trim().parse::<char>().ok()).collect();
+
+    println!("{:?}", str_arr);
 }
