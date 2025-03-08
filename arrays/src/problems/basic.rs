@@ -56,3 +56,17 @@ pub fn second_largest_element() {
         second_largest
     );
 }
+
+pub fn check_arr_is_sorted() {
+    let vec: Vec<i32> = vec![1, 2, 3, 4, 5, 9, 8];
+
+    let mut res: bool = true;
+
+    for i in 1..vec.len() {
+        if vec[i] < vec[i - 1] {
+            res = false;
+        }
+    }
+
+    println!("The array sorted status is: {}", res);
+}
