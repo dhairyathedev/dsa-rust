@@ -13,7 +13,7 @@ pub fn largest_element() {
 
 pub fn second_largest_element() {
     let mut vec: Vec<i32> = vec![1, 7, 11, 9, 20, 10, 2];
-    //    Brute force approach
+    //    Brute force approach O(NLogn + N)
     //    vec.sort();
     //    let largest = vec[0];
     //    let mut second_largest = 0;
@@ -24,18 +24,30 @@ pub fn second_largest_element() {
     //        }
     //    }
 
-    // Better solutions
-    let mut largest = vec[0];
-    let mut second_largest = 0;
-    for n in &vec {
-        if *n > largest {
-            largest = *n;
-        }
-    }
+    // Better solutions O(2N)
+    //let mut largest = vec[0];
+    //let mut second_largest = 0;
+    //for n in &vec {
+    //    if *n > largest {
+    //        largest = *n;
+    //    }
+    //}
 
-    for n in &vec {
-        if *n > second_largest && *n != largest {
-            second_largest = *n;
+    //for n in &vec {
+    //    if *n > second_largest && *n != largest {
+    //        second_largest = *n;
+    //    }
+    //}
+
+    // optimal apprach
+    let mut largest = vec[0];
+    let mut second_largest = -1;
+    for i in 1..vec.len() {
+        if vec[i] > largest {
+            second_largest = largest;
+            largest = vec[i];
+        } else if vec[i] > largest && vec[i] > second_largest {
+            second_largest = vec[i];
         }
     }
 
