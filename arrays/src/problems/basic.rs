@@ -70,3 +70,18 @@ pub fn check_arr_is_sorted() {
 
     println!("The array sorted status is: {}", res);
 }
+
+pub fn remove_duplicate_sorted() {
+    let mut vec: Vec<i32> = vec![1, 2, 2, 2, 3, 3];
+    vec.sort();
+
+    let mut i: usize = 0;
+    for j in 1..vec.len() {
+        if vec[j] != vec[i] {
+            vec[i + 1] = vec[j];
+            i += 1;
+        }
+    }
+
+    println!("The unique set of the array is: {:?}", &vec[0..i + 1]);
+}
